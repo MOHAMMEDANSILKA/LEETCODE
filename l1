@@ -1,0 +1,37 @@
+class Solution {
+public:
+
+    void markGaurded(int row, int col, vector<vector<int>>& grid) {
+        //UP
+        for(int i = row-1; i >= 0; i--) {
+            if(grid[i][col] == 2 || grid[i][col] == 3) {
+                break;
+            }
+            grid[i][col] = 1; //Marking it as gaurded
+        }
+
+        //Down
+        for(int i = row+1; i < grid.size(); i++) {
+            if(grid[i][col] == 2 || grid[i][col] == 3) {
+                break;
+            }
+            grid[i][col] = 1; //Marking it as gaurded
+        }
+
+        //left
+        for(int j = col-1; j >= 0; j--) {
+            if(grid[row][j] == 2 || grid[row][j] == 3) {
+                break;
+            }
+            grid[row][j] = 1; //Marking it as gaurded
+        }
+
+        //right
+        for(int j = col+1; j < grid[0].size(); j++) {
+            if(grid[row][j] == 2 || grid[row][j] == 3) {
+                break;
+            }
+            grid[row][j] = 1; //Marking it as gaurded
+        }
+
+    }
