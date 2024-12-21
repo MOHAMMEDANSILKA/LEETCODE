@@ -30,7 +30,7 @@ int main() {
             }
         }
 
-        cout << count << endl;  // Output the result for this test case
+        cout << count_it << endl;  // Output the result for this test case
     }
 
     return 0;
